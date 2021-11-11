@@ -23,6 +23,13 @@ Route::get('p/film-musik/musik', function () {
     return view('htmlprak2');
 });
 
+Route::get('praktikum2', function () {
+    //yang disini tidak banyak proses / persiapan me load form
+    return view('htmlprak2update');
+});
+
 //jika ternyata kasusnya butuh ngeload banyak proses
+Route::get('ets',"ViewController@showForm") ;
+
 Route::get('isiannama',"ViewController@showForm") ;
 Route::post('greetings',"ViewController@resultGreetings");
