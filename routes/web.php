@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () { //halaman utama
     return view('welcome');
 });
@@ -33,3 +34,9 @@ Route::get('ets',"ViewController@showForm") ;
 
 Route::get('isiannama',"ViewController@showForm") ;
 Route::post('greetings',"ViewController@resultGreetings");
+
+
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
